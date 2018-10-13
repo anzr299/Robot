@@ -33,7 +33,7 @@ while True:
 
     if ser.read() == 'y':
 		cv2.imshow('emoji', img)
-		engine.say('Welcome to DPS.')
+		engine.say('Welcome.')
 					
 
 
