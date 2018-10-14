@@ -25,15 +25,16 @@ while True:
         minSize=(40, 40),
         flags=cv2.cv.CV_HAAR_SCALE_IMAGE
     )
-    for (x, y, w, h) in faces:
-	if w > 0 :               
-        	face_found = True
+    if len(faces) > 0:
+                face_no = 0
 		print "face found!"
-		ser.write('s'.encode()) 
+		ser.write('y'.encode()) 
 
-    if ser.read() == 'y':
-		cv2.imshow('emoji', img)
-		engine.say('Welcome.')
+    elifif len(faces) == 0:
+                face_no +=1
+                if face_no > 2:
+		
+		cv2.imshow('emoji', img
 					
 
 
